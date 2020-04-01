@@ -1,9 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
-const StreamEdit = () => {
-  return(
+const StreamEdit = (props) => {
+  return (
     <div>StreamEdit</div>
   )
 }
 
-export default StreamEdit;
+const mapStateToProps = (state, ownProps) => {
+  return { stream: null };
+}
+
+export default connect(mapStateToProps)(StreamEdit);
